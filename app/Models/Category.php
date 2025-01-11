@@ -67,6 +67,7 @@ class Category extends Model
 
     private static function getCategoriesArray($categories, $parentId, &$result)
     {
+        $temp = [];
         foreach ($categories as $category) {
             if ($category->parent_id === $parentId) {
                 $result[] = $category;
